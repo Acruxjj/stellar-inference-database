@@ -48,6 +48,55 @@ Contains model evaluation metrics for four spectral windows and three stellar pa
 
 The evaluation metrics include R², MAE, RMSE, bias, and bias standard deviation.
 
+Let \(y_i\) be the reference value, \(\hat{y}_i\) the predicted value, \(\bar{y}\) the mean of the reference values, and \(n\) the number of evaluated samples. The residual is defined as:
+
+\[
+e_i = \hat{y}_i-y_i
+\]
+
+The metrics are calculated as follows:
+
+**Coefficient of determination (R²)**
+
+\[
+R^2 = 1-\frac{\sum_{i=1}^{n}(y_i-\hat{y}_i)^2}{\sum_{i=1}^{n}(y_i-\bar{y})^2}
+\]
+
+Measures how well the predictions explain the variance in the reference values. Higher values generally indicate better predictive performance.
+
+**Mean Absolute Error (MAE)**
+
+\[
+\mathrm{MAE}=\frac{1}{n}\sum_{i=1}^{n}|e_i|
+\]
+
+Measures the average absolute prediction error.
+
+**Root Mean Squared Error (RMSE)**
+
+\[
+\mathrm{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}e_i^2}
+\]
+
+Measures the typical magnitude of prediction errors, giving greater weight to larger errors.
+
+**Bias**
+
+\[
+\mathrm{Bias}=\frac{1}{n}\sum_{i=1}^{n}e_i
+\]
+
+Measures the mean signed prediction error. Positive values indicate systematic overestimation, while negative values indicate underestimation.
+
+**Bias standard deviation**
+
+\[
+\sigma_{\mathrm{bias}}=
+\sqrt{\frac{1}{n}\sum_{i=1}^{n}(e_i-\mathrm{Bias})^2}
+\]
+
+Measures the dispersion of residuals around their mean, describing the variability of prediction errors after accounting for the mean bias.
+
 **Note:** The stellar dataset is synthetic and reflects the parameter distributions used in its construction. It should not be interpreted as a representation of the actual Galactic M-dwarf population.
 
 ## Database
