@@ -1,4 +1,4 @@
-# Stellar Data Explorer
+# ⭐ Stellar Data Explorer
 
 An interactive data exploration project based on synthetic stellar parameters and machine learning model performance.
 
@@ -59,58 +59,6 @@ The project uses SQLite with two main tables:
 
 The database is generated from the input files using the database construction script.
 
-## Project Structure
-
-```text
-stellar-inference-database/
-├── app/
-│   └── dashboard.py
-├── data/
-│   ├── all_stars.parquet
-│   └── stellar_window_comparison.csv
-├── database/
-├── figures/
-├── scripts/
-│   ├── build_database.py
-│   ├── query_database.py
-│   └── visualize_dataset.py
-├── src/
-│   ├── data_diagnostic.py
-│   ├── data_visualization.py
-│   └── database_queries.py
-├── tests/
-├── .gitignore
-├── README.md
-└── requirements.txt
-```
-
-## Installation
-
-Clone the repository:
-
-```bash
-git clone <REPOSITORY_URL>
-cd stellar-inference-database
-```
-
-Create and activate a virtual environment:
-
-```bash
-python -m venv .venv
-```
-
-On Windows PowerShell:
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-Install the dependencies:
-
-```bash
-python -m pip install -r requirements.txt
-```
-
 ## Usage
 
 ### 1. Build the database
@@ -149,14 +97,6 @@ The dashboard will be available locally at:
 
 ```text
 http://localhost:8501
-```
-
-## Tests
-
-Run the automated tests from the project root:
-
-```bash
-python -m pytest
 ```
 
 ## Technologies
